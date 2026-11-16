@@ -196,6 +196,26 @@ textarea{min-height:96px;resize:vertical}
 .zonas-lista a{text-decoration:none;background:#fff;border:1px solid var(--borde);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.95rem}
 .zonas-lista a:hover{border-color:var(--rojo);color:var(--rojo)}
 
+/* Botón y sección de guías */
+.acciones{display:flex;align-items:center;gap:14px}
+.btn-guias{font-family:var(--display);font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;color:var(--linea);border:2px solid var(--linea);border-radius:6px;padding:5px 12px;white-space:nowrap}
+.btn-guias:hover{background:var(--linea);color:var(--asfalto)}
+@media (max-width:420px){.btn-guias{font-size:.95rem;padding:4px 9px}.acciones{gap:10px}.tel{font-size:1rem}}
+.guias-band{background:var(--asfalto);color:#fff}
+.guias-band .kicker{color:var(--linea)}
+.guias-band .intro{color:#c8c8cc}
+.guia-dest{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:center;background:var(--asfalto-2);border:1px solid rgba(255,255,255,.12);border-top:5px solid var(--rojo);border-radius:10px;padding:28px;text-decoration:none;color:#fff;transition:transform .15s ease}
+.guia-dest:hover{transform:translateY(-3px)}
+.guia-dest h3{font-size:clamp(1.6rem,3.4vw,2.2rem);text-transform:uppercase;margin-bottom:8px}
+.guia-dest p{margin:0;color:#c8c8cc}
+.guia-dest .precio{text-align:center;border-left:1px solid rgba(255,255,255,.15);padding-left:20px}
+.guia-dest .precio span{display:block;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;color:var(--linea);font-weight:700}
+.guia-dest .precio strong{display:block;font-family:var(--display);font-size:3.2rem;line-height:1}
+.guia-dest .leer{display:inline-block;margin-top:14px;font-weight:700;color:var(--linea)}
+.todas{display:inline-block;margin-top:18px;color:#fff;font-weight:600}
+@media (max-width:700px){.guia-dest{grid-template-columns:1fr}.guia-dest .precio{border-left:0;border-top:1px solid rgba(255,255,255,.15);padding:16px 0 0}}
+@media (prefers-reduced-motion:reduce){.guia-dest{transition:none}}
+
 footer{background:var(--asfalto);color:#9a9aa0;font-size:.95rem;padding:34px 0}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 footer a{color:#fff;text-decoration:none}
@@ -228,7 +248,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
       <li><a href="guias/">Guías</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <a class="tel" href="tel:+34640863998">640 863 998</a>
+    <div class="acciones"><a class="btn-guias" href="guias/">Guías</a><a class="tel" href="tel:+34640863998">640 863 998</a></div>
   </div>
 </header>
 
@@ -394,6 +414,19 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
           <text x="97" y="262" text-anchor="end">Sevilla</text><text x="160" y="306">Málaga</text>
         </svg>
       </div>
+    </div>
+  </section>
+
+  <section id="guias" class="guias-band">
+    <div class="wrap">
+      <p class="kicker">Guías y consejos</p>
+      <h2>Antes de enviar tu moto, lee esto</h2>
+      <p class="intro">Lo que hemos aprendido en más de 10 años transportando motos, explicado claro y sin rodeos.</p>
+      <a class="guia-dest" href="guias/cuanto-cuesta-transportar-una-moto.html">
+        <div><h3>¿Cuánto cuesta transportar una moto?</h3><p>Qué influye en el precio, cómo pagar menos y por qué pagas al entregar la moto.</p><span class="leer">Leer la guía →</span></div>
+        <div class="precio"><span>Desde</span><strong>100 €</strong></div>
+      </a>
+      <a class="todas" href="guias/">Ver todas las guías →</a>
     </div>
   </section>
 
